@@ -33,3 +33,21 @@ function isAdult(element) {
 function isChild(element) {
   return element < 18;
 }
+
+// Display words with short words < 6
+const words = ["apple", "orange", "kiwi", "pomegranate", "coconut"];
+
+const shortWords = words.filter(getShortWords);
+const longWords = words.filter(getLongWords);
+
+console.log("Short words: " + shortWords);
+console.log("Long words: " + longWords);
+
+
+function getShortWords(element) {
+  return element.length <= 6;
+}
+
+function getLongWords(element) {
+  return element.length > 6;
+}
